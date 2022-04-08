@@ -6,8 +6,8 @@
 #include <cstdlib>
 #include <map>
 
-#define TRUE 1
-#define FALSE 0
+#define TRUE 1 // I know that C++ has booleans, but I wanted to showcase examples of #define
+#define FALSE 0 // This was a project to teach someone else the basics of C++
 
 #define NUM_GUESSES 6
 

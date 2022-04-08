@@ -33,7 +33,6 @@ class Wordle {
 
 			while(getline(input_file,  line)){
 				this->words.insert(line);
-				//this->word_vector.push_back(line);
 			}
 
 			input_file.close();
@@ -58,7 +57,6 @@ class Wordle {
 			int index = rand() % length;
 
 			answer = this->word_vector[index];
-			//cout << answer << endl;
 		}
 
 		unordered_set<string> getWords(){
@@ -104,8 +102,8 @@ class Wordle {
 					map<char, int> guess_counts = this->letterCount(this->guesses[i]);
 					int colors[5] = {37, 37, 37, 37, 37}; // all white
 
-					for(int k = 0; k < answer.size(); k++){  //cycle
-						for(int j = this->guesses[i].size() - 1; j >= 0;  j--){ //leave
+					for(int k = 0; k < answer.size(); k++){  
+						for(int j = this->guesses[i].size() - 1; j >= 0;  j--){ 
 							if(answer[k] == this->guesses[i][j]){
 								if(k == j){
 									colors[j] = 32; //green
